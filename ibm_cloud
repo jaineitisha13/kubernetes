@@ -1,0 +1,41 @@
+IBM Cloud Private : an application platform for developing and managing on-premises, containerized applications. It is an integrated environment for managing containers that includes the container orchestrator Kubernetes, a private image registry, a management console, and monitoring frameworks.
+
+IBM Cloud Private is a private container as a service (CaaS), platform as a service (PaaS), and infrastructure as a service (IaaS) cloud platform
+
+IBM uses open sources components Kubernetes deployments to place instances of applications, which are built into Helm charts that reference Docker images.
+The Helm charts contain the details about your application, and the Docker images contain all the software packages that your applications need to run
+
+ADVANTAGES :
+
+1. Robust monitoring and logging with ELK stack -> IBM Cloud Private uses the ELK (Elasticsearch, Logstash, Kibana) stack and Filebeat. This monitoring and logging process provides a centralized store for all logs and metrics, better performance, and increased stability when you access and query logs and metrics
+
+Kibana/Grafana can be used to query the data in Elasticsearch database
+
+2. Security
+3. Metering
+5. Monitoring and alerts
+=====================================================================
+
+Helm
+
+Helm, the Kubernetes native package management system, is used for application management inside an IBM Cloud Private cluster
+
+IBM Architecture
+ cluster has four main classes of nodes: boot, master, worker, and proxy.
+ Boot node is used for running installation,confgiuration,node scaling and so on.
+ Only one boot is required for any cluster or multiple cluster. Each cluster have it own master node 
+ 
+ MASTER NODE - 
+ 1.A master node provides management services and controls the worker nodes in a cluster. Master nodes host processes that are responsible for resource allocation, state maintenance, scheduling and monitoring.
+ 
+ 2.High availability (HA) environment contains multiple master nodes, if the leading master node fails, failover logic automatically promotes a different node to the master role. Hosts that can act as the master are called master candidates.
+ 
+ Worker Node - node that provides a containerized environment for running tasks
+ 
+ Proxy Node  - node that transmits external request to services created inside cluster. Porxy node is required for load balancing
+ 
+ Management node -> optional node that only hosts management services such as monitoring, metering, and logging
+ 
+ =============================
+ IBM cloud Components
+ 
